@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1.1 r1855137">
+  <hashTree>
+    <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+      <stringProp name="BeanShellSampler.query">import calculadora.Calculadora;
+Calculadora cal = new Calculadora();
+resul = cal.sumar(2,2);
+System.out.println(resul);
+resul = cal.multiplicar(5,8);
+System.out.println(resul);</stringProp>
+      <stringProp name="BeanShellSampler.filename"></stringProp>
+      <stringProp name="BeanShellSampler.parameters"></stringProp>
+      <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+    </BeanShellSampler>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>
