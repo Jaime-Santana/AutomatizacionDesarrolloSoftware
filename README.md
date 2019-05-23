@@ -15,7 +15,7 @@ Juan Sanchez Mancilla - 20152020020
 
 -----------------------------------------------------------------------------------------------------
 
-##Para el archivo BeanShell-Sampler.jmx
+# Para el archivo BeanShell-Sampler.jmx
 
 
 Use Eclipse External Tool
