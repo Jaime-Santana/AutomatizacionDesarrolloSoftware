@@ -85,6 +85,7 @@ cat backup_pruebas.tar | docker run -i -v jenkins_data:/volume --rm loomchild/vo
 ### Ejecutar jenkins utilizando los datos de jenkins_data
 docker run --name jenkinsgestion -d -v jenkins_data:/var/jenkins_home -p 8080:8080 -p 50000:50000 ataches/pruebas_software:latest
 
+###Ejecución del entorno
 localhost:8080
 
 user: admin pass: admin
