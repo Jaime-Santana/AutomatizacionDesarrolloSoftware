@@ -53,16 +53,6 @@ Jenkins es un servidor de automatización para desarrollar de software mediante 
 Admite herramientas de control de versiones como CVS, Subversion, Git, Mercurial, Perforce y Clearcase y puede ejecutar proyectos basados en Apache Ant y Apache Maven, así como secuencias de comandos de consola y programas por lotes de Windows
 que permite a los usuarios definir las operaciones de la aplicación en texto sin formato. 
 
-Paso 1. Crear Volumen
-
-sudo docker volume create --name jenkins_data
-![](imagenes/crearVolumen.png)
-
-Paso 2. Descargar Imagen del repositorio
-
-sudo docker run --name jenkinsgestion -d -v jenkins_data:/var/jenkins_home -p 8080:8080 -p 50000:50000 jsantanas/jenkinsud:version1
-![](imagenes/descargarImagen.png)
-
 
 ----------------------------------------------------------------------------------------------------------
 
