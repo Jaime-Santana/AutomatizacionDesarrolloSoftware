@@ -63,17 +63,31 @@ Para el uso y prueba del sistema se utiliza el entorno docker, por el cual se de
 
 Ejecucion de comandos:
 
-sudo docker pull jsantanas/jenkinsud:version2
+# Pasos para probar la imagen
 
-sudo docker run --name temporal jsantanas/jenkinsud /bin/true
+# Pull de la imagen en docker
+docker pull ataches/pruebas_software:latest
 
-sudo docker cp temporal:/jenkins_data.tar.bz2 /jenkins_data.tar.bz2
+# Imagen temporal
+docker run --name temporal ataches/pruebas_software /bin/true
 
-sudo docker rm temporal
+# Copiar data al temporal  
+docker cp temporal:/backup_pruebas.tar backup_pruebas.tar
 
-sudo sudo docker volume create --name jenkins_data
+# Borrar repositorio temporal 
+docker rm temporal
 
-sudo cat jenkins_data.tar.bz2 | docker run -i -v jenkins_data:/volume --rm loomchild/volume-backup restore -
+# Crear volumen
+docker volume create --name jenkins_data
 
-docker run --name jenkinsgestion -d -v jenkins_data:/var/jenkins_home -p 8080:8080 -p 50000:50000 jsantanas/jenkinsud:version2
+# Hacer restore del backup
+cat backup_pruebas.tar | docker run -i -v jenkins_data:/volume --rm loomchild/volume-backup restore -
+
+# Ejecutar jenkins utilizando los datos de jenkins_data
+docker run --name jenkinsgestion -d -v jenkins_data:/var/jenkins_home -p 8080:8080 -p 50000:50000 ataches/pruebas_software:latest
+
+localhost:8080
+
+user: admin pass: admin
+
 
