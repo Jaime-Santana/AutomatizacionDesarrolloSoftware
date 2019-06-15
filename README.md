@@ -34,8 +34,10 @@ Ejecucion de comandos:
 
 sudo docker pull jsantanas/jenkinsud:version2
 
-docker run --name temporal jsantanas/jenkinsud /bin/true
-docker cp temporal:/jenkins_data.tar.bz2 /jenkins_data.tar.bz2
-docker rm temporal
+sudo docker run --name temporal jsantanas/jenkinsud /bin/true
 
-cat jenkins_data.tar.bz2 | docker run -i -v jenkins_data:/volume --rm loomchild/volume-backup restore -
+sudo docker cp temporal:/jenkins_data.tar.bz2 /jenkins_data.tar.bz2
+
+sudo docker rm temporal
+
+sudo cat jenkins_data.tar.bz2 | docker run -i -v jenkins_data:/volume --rm loomchild/volume-backup restore -
