@@ -1,7 +1,7 @@
 # AutomatizacionDesarrolloSoftware
 Linea de automatización de desarrollo de software
 
-Repositorio relacionado con el uso de JUnit, Cucumber y JMeter para el desarrollo de una calculadora en JAVA
+Repositorio relacionado con el uso de JUnit, Cucumber y Jenkins para el desarrollo de una calculadora en JAVA
 
 ## Integrantes:
 
