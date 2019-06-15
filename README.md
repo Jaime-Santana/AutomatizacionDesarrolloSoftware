@@ -64,7 +64,7 @@ Para el uso y prueba del sistema se utiliza el entorno docker, por el cual se de
 Ejecucion de comandos:
 
 
-## Pull de la imagen en docker
+### Pull de la imagen en docker
 docker pull ataches/pruebas_software:latest
 
 ## Imagen temporal
