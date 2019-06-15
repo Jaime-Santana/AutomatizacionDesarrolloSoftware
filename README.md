@@ -40,4 +40,9 @@ sudo docker cp temporal:/jenkins_data.tar.bz2 /jenkins_data.tar.bz2
 
 sudo docker rm temporal
 
+sudo sudo docker volume create --name jenkins_data
+
 sudo cat jenkins_data.tar.bz2 | docker run -i -v jenkins_data:/volume --rm loomchild/volume-backup restore -
+
+docker run --name jenkinsgestion -d -v jenkins_data:/var/jenkins_home -p 8080:8080 -p 50000:50000 jsantanas/jenkinsud:version2
+
