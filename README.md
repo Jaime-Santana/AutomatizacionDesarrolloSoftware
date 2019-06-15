@@ -46,7 +46,7 @@ al mismo tiempo que es comprensible incluso para los usuarios no técnicos.
 --------------------------------------------------------------------------------------------------------------------
 
 
-# JENKIS
+# JENKINS
 
 
 Jenkins es un servidor de automatización para desarrollar de software mediante integración continua y facilita ciertos aspectos de la entrega continua. 
