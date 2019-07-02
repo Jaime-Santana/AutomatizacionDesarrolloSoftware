@@ -80,6 +80,9 @@ docker rm temporal
 docker volume create --name jenkins_data
 
 ### Hacer restore del backup
+
+docker pull loomchild/volume-backup
+
 cat backup_pruebas.tar | docker run -i -v jenkins_data:/volume --rm loomchild/volume-backup restore -
 
 ### Ejecutar jenkins utilizando los datos de jenkins_data
