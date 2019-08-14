@@ -63,38 +63,31 @@ Para el uso y prueba del sistema se utiliza el entorno docker, por el cual se de
 
 Ejecucion de comandos:
 
-/*
-### Pull de la imagen en docker
+
 docker pull ataches/pruebas_software:latest
 
-### Imagen temporal
+
 docker run --name temporal ataches/pruebas_software /bin/true
 
-### Copiar data al temporal  
+
 docker cp temporal:/backup_pruebas.tar backup_pruebas.tar
 
-### Borrar repositorio temporal 
+
 docker rm temporal
 
-### Crear volumen
+
 docker volume create --name jenkins_data
 
-### Hacer restore del backup
+
 
 docker pull loomchild/volume-backup
 
 cat backup_pruebas.tar | docker run -i -v jenkins_data:/volume --rm loomchild/volume-backup restore -
 
-### Ejecutar jenkins utilizando los datos de jenkins_data
+
 docker run --name jenkinsgestion -d -v jenkins_data:/var/jenkins_home -p 8080:8080 -p 50000:50000 ataches/pruebas_software:latest
 
-### Ejecución del entorno
-localhost:8080
-
-user: admin pass: admin
 
 ![](imagenes/1.png) 
 ![](imagenes/2.png) 
 ![](imagenes/TESTFINAL.png) 
-
-*/
