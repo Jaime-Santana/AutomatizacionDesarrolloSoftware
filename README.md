@@ -64,7 +64,7 @@ Para el uso y prueba del sistema se utiliza el entorno docker, por el cual se de
 Ejecucion de comandos:
 
 
-docker pull ataches/pruebas_software:latest
+### Hacer pull de la imagen
 
 
 docker run --name temporal ataches/pruebas_software /bin/true
